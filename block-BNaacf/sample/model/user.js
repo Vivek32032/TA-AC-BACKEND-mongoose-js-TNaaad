@@ -1,0 +1,16 @@
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+
+var userSchema = new Schema({
+    name: String,
+    email: { type: String, lowercase: true },
+    favorite : [String],
+    marks :  [Number],
+    address : {
+        village: String,
+        city : String,
+        state : String,
+        pin : Number,
+        user : mongoose.Schema.type.ObjectId
+    }
+})
