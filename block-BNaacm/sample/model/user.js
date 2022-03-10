@@ -12,3 +12,7 @@ var userLoginInfo = new Schema({
     password : {type : String, minLenth : 5, maxLength : 15},
     createdAt : {type : Date, default : new Date()}
 });
+
+var User = mongoose.model('User',userSchema);
+
+module.exports = User;
